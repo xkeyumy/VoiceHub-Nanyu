@@ -4,9 +4,7 @@
     <div class="main-content">
       <div class="top-bar">
         <div class="logo-section">
-          <NuxtLink class="logo-link" to="/">
-            <img alt="VoiceHub Logo" class="logo-image" :src="logo" >
-          </NuxtLink>
+          
           <!-- 横线和学校logo -->
           <div v-if="schoolLogoHomeUrl && schoolLogoHomeUrl.trim()" class="logo-divider-container">
             <div class="logo-divider" />
@@ -68,7 +66,7 @@
         <div class="title-container">
           <h2 class="main-title">{{ siteTitle }}</h2>
           <div class="title-divider" />
-          <span class="sub-title">VoiceHub 校园广播系统</span>
+          <span class="sub-title">允公允能 日新月异</span>
         </div>
       </div>
 
