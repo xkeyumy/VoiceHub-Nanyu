@@ -1546,7 +1546,7 @@ const checkPasswordChangeRequired = async (user = null) => {
       setTimeout(() => {
         if (window.$showNotification) {
           window.$showNotification(
-            '为了您的账户安全，建议您修改密码。您可以点击右上角的"修改密码"按钮进行修改。',
+            '请注意，本账号为公用账号，请勿更改用户名和账号密码。',
             'info',
             true,
             8000 // 显示8秒
