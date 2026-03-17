@@ -1,14 +1,14 @@
 <template>
   <div class="login-form">
     <div class="form-header">
-      <h2>{{ isBindMode ? '绑定账号' : '欢迎回来' }}</h2>
+      <h2>{{ isBindMode ? '绑定账号' : '欢迎进入系统' }}</h2>
       <p v-if="isBindMode">即将绑定 {{ providerName }} 账号: {{ providerUsername }}</p>
       <p v-else>登录您的VoiceHub账户</p>
     </div>
 
     <form :class="['auth-form', { 'has-error': !!error }]" @submit.prevent="handleLogin">
       <div class="form-group">
-        <label for="username">账号名</label>
+        <label for="username">账号名(初中:nyzxcz 高中:nyzxgz)</label>
         <div class="input-wrapper">
           <svg
             class="input-icon"
@@ -33,7 +33,7 @@
       </div>
 
       <div class="form-group">
-        <label for="password">密码</label>
+        <label for="password">密码(初高中均为123456)</label>
         <div class="input-wrapper">
           <svg
             class="input-icon"
@@ -134,14 +134,14 @@
         @click="handleWebAuthnLogin"
       >
         <Fingerprint :size="20" class="webauthn-icon" />
-        <span>使用 Windows Hello / Passkey 登录</span>
+        <span>使用 Windows Hello / Passkey 登录（不推荐）</span>
       </button>
     </div>
 
     <AuthOAuthButtons v-if="!isBindMode" />
 
     <div class="form-footer">
-      <p class="help-text">不同VoiceHub平台的账号不互通</p>
+      <p class="help-text">Designed by xkeyu</p>
     </div>
 
     <AuthTwoFactorVerify
