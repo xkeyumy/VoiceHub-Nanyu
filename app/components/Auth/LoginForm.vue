@@ -3,7 +3,7 @@
     <div class="form-header">
       <h2>{{ isBindMode ? '绑定账号' : '欢迎回来' }}</h2>
       <p v-if="isBindMode">即将绑定 {{ providerName }} 账号: {{ providerUsername }}</p>
-      <p v-else>登录南渝中学广播站账户</p>
+      <p v-else>请登录南渝中学广播站账户</p>
     </div>
 
     <form :class="['auth-form', { 'has-error': !!error }]" @submit.prevent="handleLogin">
@@ -134,14 +134,14 @@
         @click="handleWebAuthnLogin"
       >
         <Fingerprint :size="20" class="webauthn-icon" />
-        <span>使用 Windows Hello/Passkey登录（不推荐）</span>
+        <span>使用 Windows Hello / Passkey登录（不推荐）</span>
       </button>
     </div>
 
     <AuthOAuthButtons v-if="!isBindMode" />
 
     <div class="form-footer">
-      <p class="help-text">初中部/高中部共享账号</p>
+      <p class="help-text">Designed by xkeyu</p>
     </div>
 
     <AuthTwoFactorVerify
