@@ -1,7 +1,7 @@
 <template>
   <div class="login-form">
     <div class="form-header">
-      <h2>{{ isBindMode ? '绑定账号' : '欢迎回来' }}</h2>
+      <h2>{{ isBindMode ? '绑定账号' : '欢迎进入系统' }}</h2>
       <p v-if="isBindMode">即将绑定 {{ providerName }} 账号: {{ providerUsername }}</p>
       <p v-else>请登录南渝中学广播站账户</p>
     </div>
@@ -134,7 +134,7 @@
         @click="handleWebAuthnLogin"
       >
         <Fingerprint :size="20" class="webauthn-icon" />
-        <span>使用 Windows Hello / Passkey登录（不推荐）</span>
+        <span>使用 Windows Hello / Passkey 登录（不推荐）</span>
       </button>
     </div>
 
