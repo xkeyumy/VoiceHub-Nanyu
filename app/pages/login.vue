@@ -4,8 +4,6 @@
       <div class="form-section">
         <div class="form-header">
           <div class="logo-row">
-            <img :src="brandLogoSrc" alt="Brand Logo" class="brand-logo-center" >
-            <div v-if="schoolLogoHomeUrl && schoolLogoHomeUrl.trim()" class="logo-divider" />
             <img
               v-if="schoolLogoHomeUrl && schoolLogoHomeUrl.trim()"
               :src="schoolLogoHomeUrl"
