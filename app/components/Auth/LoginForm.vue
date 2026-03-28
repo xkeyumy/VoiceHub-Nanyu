@@ -1,9 +1,9 @@
 <template>
   <div class="login-form">
     <div class="form-header">
-      <h2>{{ isBindMode ? '绑定账号' : '欢迎进入系统' }}</h2>
+      <h2>{{ isBindMode ? '绑定账号' : '欢迎进入广播站系统' }}</h2>
       <p v-if="isBindMode">即将绑定 {{ providerName }} 账号: {{ providerUsername }}</p>
-      <p v-else>登录到南渝中学广播站系统</p>
+      <p v-else>Nanyu Secondary School</p>
     </div>
 
     <form :class="['auth-form', { 'has-error': !!error }]" @submit.prevent="handleLogin">
@@ -122,21 +122,6 @@
         <span v-else>{{ isBindMode ? '绑定并登录' : '登录' }}</span>
       </button>
     </form>
-
-    <div v-if="!isBindMode && isWebAuthnSupported" class="webauthn-section">
-      <div class="divider">
-        <span>或</span>
-      </div>
-      <button 
-        type="button" 
-        class="webauthn-btn" 
-        :disabled="loading" 
-        @click="handleWebAuthnLogin"
-      >
-        <Fingerprint :size="20" class="webauthn-icon" />
-        <span>使用 Windows Hello / Passkey 登录（不推荐）</span>
-      </button>
-    </div>
 
     <AuthOAuthButtons v-if="!isBindMode" />
 
