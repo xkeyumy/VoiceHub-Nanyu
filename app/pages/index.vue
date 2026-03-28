@@ -4,12 +4,8 @@
     <div class="main-content">
       <div class="top-bar">
         <div class="logo-section">
-          <NuxtLink class="logo-link" to="/">
-            <img alt="VoiceHub Logo" class="logo-image" :src="logo" >
-          </NuxtLink>
           <!-- 横线和学校logo -->
           <div v-if="schoolLogoHomeUrl && schoolLogoHomeUrl.trim()" class="logo-divider-container">
-            <div class="logo-divider" />
             <img :src="proxiedSchoolLogoUrl" alt="学校Logo" class="school-logo" >
           </div>
         </div>
@@ -41,10 +37,6 @@
                   <NuxtLink class="action-item" to="/account">
                     <Icon name="user" :size="16" />
                     <span>账号管理</span>
-                  </NuxtLink>
-                  <NuxtLink v-if="isAdmin" class="action-item" to="/dashboard">
-                    <Icon name="settings" :size="16" />
-                    <span>管理后台</span>
                   </NuxtLink>
                   <button class="action-item logout" @click="handleLogout">
                     <Icon name="logout" :size="16" />
@@ -612,7 +604,7 @@
                     <Icon name="clock" :size="24" />
                   </div>
                   <div>
-                    <p class="text-sm font-black text-zinc-100">每天夜自修静班前</p>
+                    <p class="text-sm font-black text-zinc-100">重庆市南渝中学校</p>
                     <p class="text-[10px] text-zinc-500 font-bold uppercase tracking-widest mt-0.5">
                       PLAYBACK TIME
                     </p>
@@ -1272,11 +1264,11 @@ const handleRequest = async (songData) => {
       }
 
       // 如果当前在歌曲列表页，自动切换到该页面
-      if (activeTab.value !== 'songs') {
-        setTimeout(() => {
-          handleTabClick('songs')
-        }, 500)
-      }
+  //    if (activeTab.value !== 'songs') {
+    //    setTimeout(() => {
+  //        handleTabClick('songs')
+ //       }, 500)
+//      }
 
       return true
     }
