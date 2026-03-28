@@ -106,11 +106,7 @@
               <AuthChangePasswordForm />
             </div>
           </section>
-
-          <!-- 双重认证 -->
-          <section :class="sectionClass">
-            <AuthTwoFactorSetup :initial-enabled="auth.user.value?.has2FA" />
-          </section>
+          
         </div>
       </div>
     </div>
