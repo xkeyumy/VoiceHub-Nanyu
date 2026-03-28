@@ -4,12 +4,8 @@
     <div class="main-content">
       <div class="top-bar">
         <div class="logo-section">
-          <NuxtLink class="logo-link" to="/">
-            <img alt="VoiceHub Logo" class="logo-image" :src="logo" >
-          </NuxtLink>
           <!-- 横线和学校logo -->
           <div v-if="schoolLogoHomeUrl && schoolLogoHomeUrl.trim()" class="logo-divider-container">
-            <div class="logo-divider" />
             <img :src="proxiedSchoolLogoUrl" alt="学校Logo" class="school-logo" >
           </div>
         </div>
@@ -68,7 +64,7 @@
         <div class="title-container">
           <h2 class="main-title">{{ siteTitle }}</h2>
           <div class="title-divider" />
-          <span class="sub-title">VoiceHub 校园广播系统</span>
+          <span class="sub-title">允公允能 日新月异</span>
         </div>
       </div>
 
@@ -612,7 +608,7 @@
                     <Icon name="clock" :size="24" />
                   </div>
                   <div>
-                    <p class="text-sm font-black text-zinc-100">每天夜自修静班前</p>
+                    <p class="text-sm font-black text-zinc-100">重庆南渝中学</p>
                     <p class="text-[10px] text-zinc-500 font-bold uppercase tracking-widest mt-0.5">
                       PLAYBACK TIME
                     </p>
