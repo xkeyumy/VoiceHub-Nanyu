@@ -1203,11 +1203,7 @@ const handleRequest = async (songData) => {
       }
 
       // 如果当前在歌曲列表页，自动切换到该页面
-      if (activeTab.value !== 'songs') {
-        setTimeout(() => {
-          handleTabClick('songs')
-        }, 500)
-      }
+      
 
       return true
     }
