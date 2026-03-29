@@ -1665,7 +1665,7 @@ const transformMusicApiResponse = (response: any): any[] => {
 
 ## 音乐服务免责声明
 
-VoiceHub 是一款开源的校园广播站点歌管理系统。本软件遵循 GPLv3 协议开源，但请注意在使用过程中涉及的第三方服务和内容可能受相关法律法规限制。
+本软件遵循 GPLv3 协议开源，但请注意在使用过程中涉及的第三方服务和内容可能受相关法律法规限制。
 
 ### 关于音乐内容与版权
 - 本系统**不存储任何音乐文件**，不拥有任何音乐的版权；
@@ -1684,51 +1684,11 @@ VoiceHub 是一款开源的校园广播站点歌管理系统。本软件遵循 G
 
 用户使用本系统即表示已阅读、理解并同意以上条款。
 
-## 致谢
-
-### UI设计
-
-特别感谢 [过客是个铁憨憨](https://github.com/1811304592) 为本项目提供首页UI样式设计
-
-感谢 [Awesome Iwb](https://github.com/awesome-iwb) 项目提供的统一遮罩风格的图标
-
-### 贡献者
-
-Thanks goes to these wonderful people:
-
-[![Contributors](https://contrib.rocks/image?repo=laoshuikaixue/VoiceHub&repo=laoshuikaixue/VoiceHub-docs&repo=laoshuikaixue/VoiceHub-hmos)](https://github.com/laoshuikaixue/VoiceHub/graphs/contributors)
-
-### 参考项目
-
-本项目在开发过程中参考和使用了以下优秀的开源项目和API服务：
-
-- [落月API](https://doc.vkeys.cn/api-doc/)
-- [NeteaseCloudMusicApiEnhanced](https://github.com/NeteaseCloudMusicApiEnhanced/api-enhanced)
-- [meting-api](https://github.com/injahow/meting-api)
-- [lx-music-desktop](https://github.com/lyswhut/lx-music-desktop) (搜索功能参考)
-- [the1068fm - 深中风华子衿广播站点歌系统](https://github.com/SMS-COSMO/the1068fm)
-- [Sound-of-experiment - 实验之声广播站点歌系统](https://github.com/ljk743121/Sound-of-experiment) (哔哩哔哩音源参考)
-- [SPlayer](https://github.com/imsyy/SPlayer)
-- [official-website - Sparkinit](https://github.com/Sparkinit/official-website)
 
 ## 许可证
 
 [GPL-3.0](LICENSE)
 
-## 星标历史
-
-<picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=laoshuikaixue/VoiceHub&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=laoshuikaixue/VoiceHub&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=laoshuikaixue/VoiceHub&type=Date" />
- </picture>
-
-## 其他
-
-本项目有对应的原生鸿蒙版本：https://github.com/laoshuikaixue/VoiceHub-hmos
-
-该项目通过创新的混合架构设计，实现了Web端Vue音频播放器与鸿蒙原生端的跨平台音频控制同步
-
 ---
 
-Powered By LaoShui @ 2025-2026
+Powered By xkeyu @ 2025-2026
