@@ -90,31 +90,8 @@
               <span class="btn-text">从往期导入</span>
             </button>
           </div>
-
-          <!-- 联合投稿人区域 -->
-          <div v-if="user && enableCollaborativeSubmission" class="collaborators-section">
-            <div class="section-label">联合投稿</div>
-            <div class="collaborators-list">
-              <div v-for="user in collaborators" :key="user.id" class="collaborator-tag">
-                <span class="collaborator-name">{{ user.name }}</span>
-                <button
-                  class="remove-collaborator"
-                  type="button"
-                  @click="removeCollaborator(user.id)"
-                >
-                  <Icon :size="12" name="close" />
-                </button>
-              </div>
-              <button
-                class="add-collaborator-btn"
-                type="button"
-                @click="showUserSearchModal = true"
-              >
-                <Icon :size="14" name="plus" />
-                添加
-              </button>
-            </div>
-          </div>
+//联合投稿区域
+          
         </div>
 
         <!-- 搜索结果容器 -->
@@ -228,95 +205,8 @@
               </button>
             </div>
 
-            <!-- 网易云音乐登录状态和选项 -->
-            <div v-if="platform === 'netease'" class="netease-options">
-              <!-- 加载中状态 -->
-              <div v-if="checkingNeteaseLogin" class="netease-loading-state">
-                <div class="loading-content">
-                  <div class="loading-spinner" />
-                  <span class="loading-text">刷新中</span>
-                </div>
-              </div>
-
-              <!-- 未登录状态 -->
-              <div v-else-if="!isNeteaseLoggedIn" class="login-entry">
-                <div class="login-desc">
-                  <p class="login-title">登录网易云获取完整体验</p>
-                </div>
-                <div class="login-actions">
-                  <button class="login-btn" type="button" @click="showLoginModal = true">
-                    立即登录
-                  </button>
-                  <button class="import-btn" type="button" @click="handleImportClick">
-                    <Icon :size="14" name="upload" />
-                    导入数据
-                  </button>
-                </div>
-              </div>
-
-              <!-- 已登录状态 -->
-              <div v-else class="user-status">
-                <div class="user-compact-row">
-                  <div class="user-profile">
-                    <img
-                      v-if="neteaseUser?.avatarUrl"
-                      :src="convertToHttps(neteaseUser.avatarUrl)"
-                      alt="avatar"
-                      class="user-avatar"
-                    >
-                    <span class="user-name">{{ neteaseUser?.nickname || '已登录' }}</span>
-                  </div>
-
-                  <div class="search-type-switch">
-                    <label :class="['radio-label', { active: searchType === 1 }]">
-                      <input v-model="searchType" :value="1" type="radio" > 单曲
-                    </label>
-                    <label :class="['radio-label', { active: searchType === 1009 }]">
-                      <input v-model="searchType" :value="1009" type="radio" > 播客
-                    </label>
-                  </div>
-
-                  <div class="user-actions-row">
-                    <button
-                      class="action-btn-compact"
-                      title="最近播放"
-                      type="button"
-                      @click="showRecentSongsModal = true"
-                    >
-                      <Icon :size="14" name="history" />
-                      <span>最近</span>
-                    </button>
-                    <button
-                      class="action-btn-compact"
-                      title="从歌单投稿"
-                      type="button"
-                      @click="showPlaylistModal = true"
-                    >
-                      <Icon :size="14" name="playlist" />
-                      <span>歌单</span>
-                    </button>
-                    <button
-                      class="action-btn-compact"
-                      aria-label="导出Cookie数据"
-                      title="导出Cookie数据"
-                      type="button"
-                      @click="handleExportData"
-                    >
-                      <Icon :size="14" name="download" />
-                    </button>
-                    <button
-                      class="action-btn-compact text-red-400 hover:text-red-300 hover:bg-red-400/10"
-                      aria-label="退出登录"
-                      title="退出登录"
-                      type="button"
-                      @click="handleLogoutNetease"
-                    >
-                      <Icon :size="14" name="logout" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+<!-- 网易云音乐登录状态和选项 -->
+            
           </div>
 
           <div class="results-content">
