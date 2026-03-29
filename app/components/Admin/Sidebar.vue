@@ -16,7 +16,7 @@
           </div>
           <!-- 品牌文字 -->
           <div class="flex flex-col justify-center">
-            <h1 class="font-bold text-lg text-zinc-100 leading-none tracking-tight">VoiceHub</h1>
+            <h1 class="font-bold text-lg text-zinc-100 leading-none tracking-tight">Nanyu</h1>
             <p
               class="text-[10px] text-zinc-500 mt-1.5 uppercase tracking-widest font-bold leading-none"
             >
