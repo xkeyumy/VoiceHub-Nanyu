@@ -90,7 +90,30 @@
               <span class="btn-text">从往期导入</span>
             </button>
           </div>
-//联合投稿区域
+<!-- 联合投稿人区域 -->
+          <div v-if="user && enableCollaborativeSubmission" class="collaborators-section">
+            <div class="section-label">联合投稿</div>
+            <div class="collaborators-list">
+              <div v-for="user in collaborators" :key="user.id" class="collaborator-tag">
+                <span class="collaborator-name">{{ user.name }}</span>
+                <button
+                  class="remove-collaborator"
+                  type="button"
+                  @click="removeCollaborator(user.id)"
+                >
+                  <Icon :size="12" name="close" />
+                </button>
+              </div>
+              <button
+                class="add-collaborator-btn"
+                type="button"
+                @click="showUserSearchModal = true"
+              >
+                <Icon :size="14" name="plus" />
+                添加
+              </button>
+            </div>
+          </div>
           
         </div>
 
